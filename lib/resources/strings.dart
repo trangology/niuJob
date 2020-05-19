@@ -27,4 +27,5 @@ class Strings {
   static String textInputOrganizationLabel = "Tổ chức/Công ty";
   static String textWorkPosition = "Vị trí: Tech lead, Senior Developer...";
   static String textWorkPositionLabel = "Vị trí làm việc";
+  static String textLanguage = "Ngoại ngữ";
 }

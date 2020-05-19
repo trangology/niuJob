@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:niu_job/resources/my_widget.dart';
 import 'package:niu_job/resources/strings.dart';
 
 // ignore: must_be_immutable
@@ -27,11 +28,7 @@ class StepOne extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
-                  child: Text(Strings.textCreateResumeTitle,
-                      style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold)),
-                ),
+                MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 16),
                   child: Text(Strings.textCreateResumeSubtitle,
@@ -117,10 +114,7 @@ class StepOne extends StatelessWidget {
                               border: OutlineInputBorder()),
                         ),
                       ),
-                      OutlineButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Icons.keyboard_arrow_right),
-                          label: Text("NEXT"))
+                      MyWidget.prevNextButton(() {}, () {})
                     ],
                   ),
                 ),

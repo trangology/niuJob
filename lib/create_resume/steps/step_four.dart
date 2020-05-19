@@ -18,23 +18,8 @@ class StepFour extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(top: 16),
-                  child: Text(
-                    Strings.textCreateResumeTitle,
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 32),
-                  child: Text(
-                    Strings.textExperience,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
+                MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
+
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Text(Strings.textHintStep4,
@@ -116,12 +101,7 @@ class StepFour extends StatelessWidget {
                   ),
                 ),
                 MyWidget.textField("Kinh nghiệm làm việc", "Mô tả ngắn gọn kinh nghiệm làm việc của bạn tại đây.", null, 7),
-                Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
-                  child: Center(
-                    child: OutlineButton.icon(onPressed: () {}, icon: Icon(Icons.keyboard_arrow_right), label: Text("NEXT")),
-                  ),
-                )
+                MyWidget.prevNextButton(() {}, () {})
               ],
             ),
           ),

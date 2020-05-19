@@ -6,6 +6,7 @@ import 'package:niu_job/repositories/user_repository.dart';
 import 'package:niu_job/splash/splash_screen.dart';
 
 import 'authentication_bloc/authentication_bloc.dart';
+import 'create_resume/steps/step_five.dart';
 import 'create_resume/steps/step_four.dart';
 import 'create_resume/steps/step_one.dart';
 import 'home/home.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
             return LoginScreen(userRepository: _userRepository);
           }
           if (state is Authenticated) {
-            return StepFour();
+            return StepFive();
           }
         },
       ),

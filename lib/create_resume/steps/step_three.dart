@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:niu_job/resources/my_widget.dart';
 import 'package:niu_job/resources/strings.dart';
 
 class StepThree extends StatelessWidget {
@@ -16,14 +17,7 @@ class StepThree extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0, bottom: 32),
-                child: Text(Strings.textCreateResumeTitle,
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w500,
-                    )),
-              ),
+              MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
               Text(Strings.textEducation,
                   style: TextStyle(
                     fontSize: 18,
@@ -121,15 +115,7 @@ class StepThree extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 32),
-                child: Center(
-                  child: OutlineButton.icon(
-                      onPressed: () {},
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      label: Text("NEXT")),
-                ),
-              )
+              MyWidget.prevNextButton(() {}, () {})
             ],
           ),
         ),
