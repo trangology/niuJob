@@ -1,7 +1,10 @@
 class Strings {
+  static const BASE_URL = "http://7924beac.ngrok.io";
+
   static String textCreateResumeTitle = "Tạo sơ yếu lý lịch";
   static String textCreateResumeSubtitle =
       "Tạo sơ yếu lý lịch để nhà tuyển dụng có thể dễ dàng tìm kiếm bạn nhé!";
+  static String textPreviewResume = "Xem trước sơ yếu lý lịch";
   static String textFullNameLabel = "Họ và tên";
   static String textFullNameHint = "Họ và tên. VD: Nguyễn Thùy Trang";
   static String textEmailLabel = "Email";
@@ -156,5 +159,3 @@ static List<String> letterW = [
 static List<String> letterZ = [
     "Zulu"
   ];
-
-}

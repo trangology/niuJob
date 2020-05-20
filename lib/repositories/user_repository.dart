@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -29,7 +31,7 @@ class UserRepository {
     );
   }
 
-  Future<void> signInWithCredentials(String email, String password) {
+  Future<void> signInWithCredentials(String email, String password) async {
     return _firebaseAuth.signInWithEmailAndPassword(
       email: email,
       password: password,

@@ -1,10 +1,13 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:niu_job/repositories/user_repository.dart';
+import 'package:niu_job/resources/strings.dart';
 import 'package:niu_job/utils/validators.dart';
 import 'package:rxdart/rxdart.dart';
-
+import 'package:http/http.dart' as http;
+import '../../models/jobseeker.dart';
 import 'login_event.dart';
 import 'login_state.dart';
 
@@ -13,7 +16,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   LoginBloc({
     @required UserRepository userRepository,
-  })  : assert(userRepository != null),
+  })
+      : assert(userRepository != null),
         _userRepository = userRepository;
 
   @override
@@ -22,8 +26,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   @override
   Stream<Transition<LoginEvent, LoginState>> transformEvents(
       Stream<LoginEvent> events,
-      TransitionFunction<LoginEvent, LoginState> transitionFn,
-      ) {
+      TransitionFunction<LoginEvent, LoginState> transitionFn,) {
     final nonDebounceStream = events.where((event) {
       return (event is! EmailChanged && event is! PasswordChanged);
     });
@@ -66,7 +69,13 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   Stream<LoginState> _mapLoginWithGooglePressedToState() async* {
     try {
-      await _userRepository.signInWithGoogle();
+      var user = await _userRepository.signInWithGoogle();
+      await http.post(Strings.BASE_URL + '/jobseeker/new',
+          headers: {"Content-Type": "application/json"}, body: jsonEncode(
+            JobSeeker(
+              user.uid, user.photoUrl, user.displayName, user.phoneNumber, user.email
+            )
+          ));
       yield LoginState.success();
     } catch (_) {
       yield LoginState.failure();

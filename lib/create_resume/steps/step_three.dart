@@ -1,10 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:niu_job/models/education.dart';
+import 'package:niu_job/models/resume.dart';
 import 'package:niu_job/resources/my_widget.dart';
 import 'package:niu_job/resources/strings.dart';
 
-class StepThree extends StatelessWidget {
+import 'step_four.dart';
+
+class StepThree extends StatefulWidget {
+  final Resume resume;
+
+  StepThree({@required this.resume});
+  @override
+  _StepThreeState createState() => _StepThreeState();
+}
+
+class _StepThreeState extends State<StepThree> {
+  var _schoolNameController = TextEditingController();
+  var _degreeController = TextEditingController();
   var _startDate = TextEditingController();
   var _endDate = TextEditingController();
 
@@ -18,13 +32,17 @@ class StepThree extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
-              Text(Strings.textEducation,
-                  style: TextStyle(
-                    fontSize: 18,
-                  )),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Text(Strings.textEducation,
+                    style: TextStyle(
+                      fontSize: 18,
+                    )),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
+                  controller: _schoolNameController,
                   decoration: InputDecoration(
                       hintText: Strings.textSchoolHint,
                       labelText: Strings.textSchoolLabel,
@@ -37,6 +55,7 @@ class StepThree extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
+                  controller: _degreeController,
                   decoration: InputDecoration(
                       hintText: Strings.textDegreeHint,
                       labelText: Strings.textDegreeLabel,
@@ -115,7 +134,17 @@ class StepThree extends StatelessWidget {
                   ],
                 ),
               ),
-              MyWidget.prevNextButton(() {}, () {})
+              MyWidget.prevNextButton(() {
+                Navigator.of(context).pop();
+              }, () {
+                widget.resume.education = Education(
+                  degree: _degreeController.text,
+                  endDate: _endDate.text,
+                  schoolName: _schoolNameController.text,
+                  startDate: _startDate.text
+                );
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => StepFour(resume: widget.resume,)));
+              })
             ],
           ),
         ),

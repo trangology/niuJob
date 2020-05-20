@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:niu_job/models/resume.dart';
 import 'package:niu_job/resources/my_widget.dart';
 import 'package:niu_job/resources/strings.dart';
 
+import 'step_six.dart';
+
 class StepFive extends StatelessWidget {
+  final Resume resume;
+
+  StepFive({@required this.resume});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +35,14 @@ class StepFive extends StatelessWidget {
                   },
                 ),
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 16, left: 16, right: 16),
+              child: MyWidget.prevNextButton(() {
+                Navigator.of(context).pop();
+              }, () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => StepSix(resume: resume,)));
+              }),
             )
           ],
         ),
@@ -70,7 +84,7 @@ Widget languageRow() => Padding(
               ),
             ),
           ),
-      )
+      ),
     ],
   ),
 );
