@@ -1,10 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:niu_job/models/resume.dart';
 import 'package:niu_job/resources/my_widget.dart';
 import 'package:niu_job/resources/strings.dart';
 
-class StepTwo extends StatelessWidget {
+import 'step_three.dart';
 
+class StepTwo extends StatelessWidget {
+  final Resume resume;
+
+  StepTwo({@required this.resume});
+
+  var _descriptionController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +26,7 @@ class StepTwo extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 32),
                   child: TextField(
+                    controller: _descriptionController,
                     maxLines: 10,
                     textInputAction: TextInputAction.done,
                     decoration: InputDecoration(
@@ -27,7 +35,12 @@ class StepTwo extends StatelessWidget {
                         border: OutlineInputBorder()),
                   ),
                 ),
-                MyWidget.prevNextButton(() {}, () {})
+                MyWidget.prevNextButton(() {
+                  Navigator.of(context).pop();
+                }, () {
+                  resume.description = _descriptionController.text;
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => StepThree(resume: resume)));
+                })
                 ],
             ),
           ),

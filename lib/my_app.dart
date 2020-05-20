@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:niu_job/create_resume/steps/start_create_resume.dart';
+import 'package:niu_job/create_resume/steps/step_seven.dart';
+import 'package:niu_job/create_resume/steps/step_six.dart';
 import 'package:niu_job/create_resume/steps/step_three.dart';
 import 'package:niu_job/create_resume/steps/step_two.dart';
+import 'package:niu_job/create_resume/steps/your_location.dart';
 import 'package:niu_job/repositories/user_repository.dart';
 import 'package:niu_job/splash/splash_screen.dart';
 
@@ -43,7 +47,7 @@ class MyApp extends StatelessWidget {
             return LoginScreen(userRepository: _userRepository);
           }
           if (state is Authenticated) {
-            return StepFive();
+            return YourLocation();
           }
         },
       ),
