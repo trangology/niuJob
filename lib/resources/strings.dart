@@ -42,4 +42,119 @@ class Strings {
   static String jobDescription ="Mô tả công việc";
   static String candidatesRequired ="Yêu cầu ứng viên";
   static String salary ="Mức lương";
+  static List<String> letterA = [
+    "Arabic",
+    "American",
+    "Anal",
+    "Andio",
+    "Angami Naga"
+  ];
+  static List<String> letterB = [
+    "Basque",
+    "Belarusian",
+    "Bengali",
+    "Bosnian",
+    "Bulgarian"
+  ];
+  static List<String> letterC = [
+    "Cantonese",
+    "Catalan",
+    "Chinese",
+    "Croatian",
+    "Czech"
+  ];
+  static List<String> letterD = [
+    "Danish",
+    "Dutch"
+  ];
+  static List<String> letterE = [
+    "English",
+    "Estonian"
+  ];
+  static List<String> letterF = [
+    "Filipino",
+    "Finnish",
+    "French"
+  ];
+  static List<String> letterG = [
+    "Georgian",
+    "German",
+    "Greek",
+    "Gujarati"
+  ];
+  static List<String> letterH = [
+    "Hebrew",
+    "Hindi",
+    "Hungarian"
+  ];
+  static List<String> letterI = [
+    "Icelandic",
+    "Indonesian",
+    "Irish",
+    "Italian"
+  ];
+  static List<String> letterJ = [
+    "Japanese"
+  ];
+  static List<String> letterK = [
+    "Kazakh",
+    "Khmer",
+    "Korean"
+  ];
+  static List<String> letterL = [
+    "Lao",
+    "Latinh",
+    "Latvian",
+    "Lithuanian"
+  ];
+  static List<String> letterM = [
+    "Malay",
+    "Marathi",
+    "Mongolian",
+    "Nepali",
+    "Norwegian"
+  ];
+  static List<String> letterP = [
+    "Pashto",
+    "Persian",
+    "Polish",
+    "Portuguese",
+    "Punjabi"
+  ];
+static List<String> letterR = [
+    "Romanian",
+    "Russian"
+  ];
+static List<String> letterS = [
+    "Scottish Gaelic",
+    "Serbian",
+    "Slovak",
+    "Slovene",
+    "Somali",
+    "Spanish",
+    "Swahili",
+    "Swedish"
+  ];
+static List<String> letterT = [
+    "Tagalog",
+    "Tamil",
+    "Telugu",
+    "Thai",
+    "Turkish"
+  ];
+static List<String> letterU = [
+    "Ukrainian",
+    "Urdu",
+    "Uzbek"
+  ];
+static List<String> letterV = [
+    "Vietnamese"
+  ];
+static List<String> letterW = [
+    "Welsh"
+  ];
+static List<String> letterZ = [
+    "Zulu"
+  ];
+
 }
