@@ -28,6 +28,4 @@ class Strings {
   static String textWorkPosition = "Vị trí: Tech lead, Senior Developer...";
   static String textWorkPositionLabel = "Vị trí làm việc";
   static String textLanguage = "Ngoại ngữ";
-  static String textAdd = "Thêm";
-  static String textPreviewResume = "Xem trước sơ yếu lý lịch";
 }
