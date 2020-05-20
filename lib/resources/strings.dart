@@ -28,4 +28,18 @@ class Strings {
   static String textWorkPosition = "Vị trí: Tech lead, Senior Developer...";
   static String textWorkPositionLabel = "Vị trí làm việc";
   static String textLanguage = "Ngoại ngữ";
+  static String textResume = "Tạo Resume";
+  static String textResumeRequired = "Tạo resume để nhà tuyển dụng dễ dàng tìm kiếm bạn";
+  static String textResumehint = "Ứng dụng sẽ tự động lấy thông tin của bạn và điền vào form resume có sẵn";
+  static String connectToLinkedin = "Kết nối tới Linkedin";
+  static String createNewResume = "Chưa có, tạo resume mới";
+  static String workRequired = "Yêu cầu công việc:";
+  static String benefits = "Các phúc lợi:";
+  static String connectToRecruiter = "Kết nối với nhà tuyển dụng";
+  static String recruiterInfo = "Thông tin hà tuyển dụng";
+  static String findWhos ="Bạn đang tìm kiếm ai";
+  static String jobType ="Kiểu công việc";
+  static String jobDescription ="Mô tả công việc";
+  static String candidatesRequired ="Yêu cầu ứng viên";
+  static String salary ="Mức lương";
 }
