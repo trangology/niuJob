@@ -10,5 +10,7 @@ abstract class LastStepEvent extends Equatable {
 
 class StartUpload extends LastStepEvent {
   final Resume resume;
-  StartUpload({@required this.resume});
+  final String userId;
+
+  StartUpload({@required this.resume, this.userId});
 }

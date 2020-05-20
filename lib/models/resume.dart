@@ -1,9 +1,12 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:niu_job/models/language_skill.dart';
 import 'package:niu_job/models/programming_lang.dart';
 
 import 'education.dart';
 import 'work_experience.dart';
 
+part 'resume.g.dart';
+@JsonSerializable(explicitToJson: true, nullable: false)
 class Resume {
   String fullName;
   String email;
@@ -13,10 +16,10 @@ class Resume {
   String description;
   Education education;
   WorkExperience workExperience;
+  String address;
   List<LanguageSkill> languageSkills;
   List<ProgrammingLanguage> programmingLanguages;
   List<String> otherSkills;
-  String address;
 
   Resume({
       this.fullName,
@@ -30,4 +33,8 @@ class Resume {
       this.languageSkills,
       this.programmingLanguages,
       this.otherSkills, this.address});
+
+  factory Resume.fromJson(Map<String, dynamic> json) => _$ResumeFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ResumeToJson(this);
 }

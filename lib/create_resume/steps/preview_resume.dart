@@ -333,7 +333,7 @@ class PreviewResume extends StatelessWidget {
                 MyWidget.prevNextButton(() {
                   Navigator.of(context).pop();
                 }, (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => LastStep(resume: resume)));
+                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => LastStep(resume: resume)), (route) => false);
                 })
               ],
             ),

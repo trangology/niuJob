@@ -31,7 +31,7 @@ class _StepSevenState extends State<StepSeven> {
               children: <Widget>[
                 MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 32),
+                  padding: EdgeInsets.only(bottom: 16),
                   child: MyWidget.textCategory("Kĩ năng khác:"),
                 ),
                 TextField(

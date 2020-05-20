@@ -32,10 +32,13 @@ class _StepThreeState extends State<StepThree> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               MyWidget.createResumeTitle(Strings.textCreateResumeTitle),
-              Text(Strings.textEducation,
-                  style: TextStyle(
-                    fontSize: 18,
-                  )),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Text(Strings.textEducation,
+                    style: TextStyle(
+                      fontSize: 18,
+                    )),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
