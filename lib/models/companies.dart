@@ -3,7 +3,7 @@ import 'package:niu_job/models/profile.dart';
 
 part 'companies.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Company {
   String uid;
   String posterPhone;

@@ -5,7 +5,7 @@ import 'time.dart';
 
 part 'companies_post.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class CompaniesPost {
   String companyId;
   List<String> positions;

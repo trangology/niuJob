@@ -1,5 +1,5 @@
 class Strings {
-  static const BASE_URL = "http://7924beac.ngrok.io";
+  static const BASE_URL = "http://8755a8ca.ngrok.io";
 
   static String textCreateResumeTitle = "Tạo sơ yếu lý lịch";
   static String textCreateResumeSubtitle =
@@ -14,7 +14,7 @@ class Strings {
   static String textSkypeLabel = 'Skype';
   static String textSkypeHint = 'Skype (không bắt buộc). VD: "mySkype"';
   static String textPersonalWebLabel = 'Website cá nhân';
-  static String textPersonalWebHint= 'Website cá nhân (không bắt buộc)';
+  static String textPersonalWebHint = 'Website cá nhân (không bắt buộc)';
   static String textGoalHint = "Mô tả mục tiêu của bạn là gì?";
   static String textGoalLabel = "Mục tiêu";
   static String textEducation = "Học vấn";
@@ -40,11 +40,11 @@ class Strings {
   static String benefits = "Các phúc lợi:";
   static String connectToRecruiter = "Kết nối với nhà tuyển dụng";
   static String recruiterInfo = "Thông tin hà tuyển dụng";
-  static String findWhos ="Bạn đang tìm kiếm ai";
-  static String jobType ="Kiểu công việc";
-  static String jobDescription ="Mô tả công việc";
-  static String candidatesRequired ="Yêu cầu ứng viên";
-  static String salary ="Mức lương";
+  static String findWhos = "Bạn đang tìm kiếm ai";
+  static String jobType = "Kiểu công việc";
+  static String jobDescription = "Mô tả công việc";
+  static String candidatesRequired = "Yêu cầu ứng viên";
+  static String salary = "Mức lương";
   static List<String> letterA = [
     "Arabic",
     "American",
@@ -124,11 +124,11 @@ class Strings {
     "Portuguese",
     "Punjabi"
   ];
-static List<String> letterR = [
+  static List<String> letterR = [
     "Romanian",
     "Russian"
   ];
-static List<String> letterS = [
+  static List<String> letterS = [
     "Scottish Gaelic",
     "Serbian",
     "Slovak",
@@ -138,24 +138,25 @@ static List<String> letterS = [
     "Swahili",
     "Swedish"
   ];
-static List<String> letterT = [
+  static List<String> letterT = [
     "Tagalog",
     "Tamil",
     "Telugu",
     "Thai",
     "Turkish"
   ];
-static List<String> letterU = [
+  static List<String> letterU = [
     "Ukrainian",
     "Urdu",
     "Uzbek"
   ];
-static List<String> letterV = [
+  static List<String> letterV = [
     "Vietnamese"
   ];
-static List<String> letterW = [
+  static List<String> letterW = [
     "Welsh"
   ];
-static List<String> letterZ = [
+  static List<String> letterZ = [
     "Zulu"
   ];
+}

@@ -29,10 +29,10 @@ Map<String, dynamic> _$CompaniesPostToJson(CompaniesPost instance) =>
       'companyId': instance.companyId,
       'positions': instance.positions,
       'description': instance.description,
-      'salary': instance.salary,
+      'salary': instance.salary?.toJson(),
       'salaryType': instance.salaryType,
       'languages': instance.languages,
       'workTypes': instance.workTypes,
-      'time': instance.time,
+      'time': instance.time?.toJson(),
       'isExpired': instance.isExpired,
     };

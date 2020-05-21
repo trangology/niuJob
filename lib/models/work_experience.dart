@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'work_experience.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class WorkExperience {
   String organizationName;
   String position;

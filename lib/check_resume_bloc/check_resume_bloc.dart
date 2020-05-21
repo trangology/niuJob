@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:niu_job/check_resume_bloc/check_resume_event.dart';
 import 'package:niu_job/check_resume_bloc/check_resume_state.dart';
+import 'package:niu_job/resources/strings.dart';
 
 class CheckResumeBloc extends Bloc<CheckResumeEvent, CheckResumeState> {
   @override
@@ -18,9 +19,9 @@ class CheckResumeBloc extends Bloc<CheckResumeEvent, CheckResumeState> {
   }
 
   Future<bool> userHasResume(String id) async {
-    var headers = {'userId': id};
+    var headers = {"userId": id};
     bool hasResume = jsonDecode((await http.get(
-            'http://7924beac.ngrok.io/jobseeker/resume/hasResume',
+            '${Strings.BASE_URL}/jobseeker/resume/hasResume',
             headers: headers))
         .body)['hasResume'];
 

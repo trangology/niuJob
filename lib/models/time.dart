@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'time.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Time {
   String from;
   String to;

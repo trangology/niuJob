@@ -19,5 +19,5 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$CompanyToJson(Company instance) => <String, dynamic>{
       'uid': instance.uid,
       'posterPhone': instance.posterPhone,
-      'profile': instance.profile,
+      'profile': instance.profile?.toJson(),
     };

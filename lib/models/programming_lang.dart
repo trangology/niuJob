@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'programming_lang.g.dart';
-@JsonSerializable(nullable: true)
+@JsonSerializable(explicitToJson: true)
 class ProgrammingLanguage {
   String name;
   String experience;

@@ -3,20 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:niu_job/check_resume_bloc/check_resume_bloc.dart';
 import 'package:niu_job/check_resume_bloc/check_resume_event.dart';
 import 'package:niu_job/check_resume_bloc/check_resume_state.dart';
-import 'package:niu_job/create_resume/steps/start_create_resume.dart';
-import 'package:niu_job/create_resume/steps/step_seven.dart';
-import 'package:niu_job/create_resume/steps/step_six.dart';
-import 'package:niu_job/create_resume/steps/step_three.dart';
-import 'package:niu_job/create_resume/steps/step_two.dart';
-import 'package:niu_job/create_resume/steps/step_zero.dart';
-import 'package:niu_job/create_resume/steps/your_location.dart';
 import 'package:niu_job/repositories/user_repository.dart';
 import 'package:niu_job/splash/splash_screen.dart';
 
 import 'authentication_bloc/authentication_bloc.dart';
-import 'create_resume/steps/step_five.dart';
-import 'create_resume/steps/step_four.dart';
-import 'create_resume/steps/step_one.dart';
+import 'candicate/create_resume/steps/step_zero.dart';
 import 'home/home.dart';
 import 'login/login_screen.dart';
 
@@ -38,8 +29,7 @@ class MyApp extends StatelessWidget {
         buttonTheme: ButtonThemeData(
             buttonColor: Colors.orange,
             highlightColor: Colors.orange,
-            textTheme: ButtonTextTheme.primary
-        ),
+            textTheme: ButtonTextTheme.primary),
       ),
       home: Scaffold(
         body: BlocBuilder<AuthenticationBloc, AuthenticationState>(
@@ -53,7 +43,8 @@ class MyApp extends StatelessWidget {
             }
             if (stateUser is Authenticated) {
               return BlocProvider(
-                create: (context) => CheckResumeBloc()..add(FetchUserResume(userId: stateUser.user.uid)),
+                  create: (context) => CheckResumeBloc()
+                    ..add(FetchUserResume(userId: stateUser.user.uid)),
                   child: BlocBuilder<CheckResumeBloc, CheckResumeState>(
                     // ignore: missing_return
                     builder: (context, state) {

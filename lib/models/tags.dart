@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'tags.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Tags {
   String name;
   String type;

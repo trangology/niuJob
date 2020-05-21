@@ -28,7 +28,8 @@ Map<String, dynamic> _$JobSeekerPostToJson(JobSeekerPost instance) =>
     <String, dynamic>{
       'jobSeekerId': instance.jobSeekerId,
       'positions': instance.positions,
-      'programmingLanguages': instance.programmingLanguages,
-      'languages': instance.languages,
+      'programmingLanguages':
+          instance.programmingLanguages?.map((e) => e?.toJson())?.toList(),
+      'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
       'workTypes': instance.workTypes,
     };

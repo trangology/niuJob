@@ -19,6 +19,6 @@ JobSeekerLiked _$JobSeekerLikedFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$JobSeekerLikedToJson(JobSeekerLiked instance) =>
     <String, dynamic>{
       'jobSeekerId': instance.jobSeekerId,
-      'post': instance.post,
+      'post': instance.post?.toJson(),
       'date': instance.date?.toIso8601String(),
     };

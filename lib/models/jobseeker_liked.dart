@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:niu_job/models/jobseeker_post.dart';
 part 'jobseeker_liked.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class JobSeekerLiked {
   String jobSeekerId;
   JobSeekerPost post;

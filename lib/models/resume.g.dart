@@ -44,10 +44,12 @@ Map<String, dynamic> _$ResumeToJson(Resume instance) => <String, dynamic>{
       'skype': instance.skype,
       'personalWebsite': instance.personalWebsite,
       'description': instance.description,
-      'education': instance.education,
-      'workExperience': instance.workExperience,
-      'languageSkills': instance.languageSkills,
-      'programmingLanguages': instance.programmingLanguages,
-      'otherSkills': instance.otherSkills,
+      'education': instance.education?.toJson(),
+      'workExperience': instance.workExperience?.toJson(),
       'address': instance.address,
+      'languageSkills':
+          instance.languageSkills?.map((e) => e?.toJson())?.toList(),
+      'programmingLanguages':
+          instance.programmingLanguages?.map((e) => e?.toJson())?.toList(),
+      'otherSkills': instance.otherSkills,
     };

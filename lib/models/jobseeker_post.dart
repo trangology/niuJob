@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:niu_job/models/language_skill.dart';
 import 'package:niu_job/models/programming_lang.dart';
 part 'jobseeker_post.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class JobSeekerPost {
   String jobSeekerId;
   List<String> positions;

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'language_skill.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class LanguageSkill {
   final String language;
   final String level;

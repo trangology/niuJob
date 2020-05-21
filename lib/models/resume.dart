@@ -6,7 +6,7 @@ import 'education.dart';
 import 'work_experience.dart';
 
 part 'resume.g.dart';
-@JsonSerializable(explicitToJson: true, nullable: false)
+@JsonSerializable(explicitToJson: true)
 class Resume {
   String fullName;
   String email;

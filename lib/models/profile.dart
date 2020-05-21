@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'profile.g.dart';
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Profile {
   String avatar;
   String name;
