@@ -6,9 +6,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Text("niuJob Splash Screen",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline3),
+          child: Image.asset('assets/image.png'),
         ),
       ),
     );

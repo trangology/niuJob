@@ -97,7 +97,7 @@ class StepOne extends StatelessWidget {
                             focusNode: _skypeNode,
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
-                                prefixIcon: Icon(FontAwesomeIcons.github),
+                                prefixIcon: Icon(FontAwesomeIcons.skype),
                                 labelText: Strings.textSkypeLabel,
                                 hintText: Strings.textSkypeHint,
                                 border: OutlineInputBorder()),
@@ -110,7 +110,7 @@ class StepOne extends StatelessWidget {
                             controller: _personalWebsiteController,
                             textInputAction: TextInputAction.done,
                             decoration: InputDecoration(
-                                prefixIcon: Icon(FontAwesomeIcons.github),
+                                prefixIcon: Icon(Icons.web),
                                 labelText: Strings.textPersonalWebLabel,
                                 hintText: Strings.textPersonalWebHint,
                                 border: OutlineInputBorder()),

@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:niu_job/authentication_bloc/authentication_bloc.dart';
 import 'package:niu_job/register/register_button.dart';
 
-import 'bloc/register_bloc.dart';
-import 'bloc/register_event.dart';
-import 'bloc/register_state.dart';
+import 'bloc/bloc.dart';
 
 class RegisterForm extends StatefulWidget {
   State<RegisterForm> createState() => _RegisterFormState();

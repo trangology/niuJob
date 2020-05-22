@@ -82,63 +82,66 @@ class _LoginFormState extends State<LoginForm> {
       },
       child: BlocBuilder<LoginBloc, LoginState>(
         builder: (context, state) {
-          return Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Form(
-              child: ListView(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Image.asset('assets/flutter_logo.png', height: 200),
-                  ),
-                  TextFormField(
-                    controller: _emailController,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8))
+          return Container(
+            color: Colors.white,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Form(
+                child: ListView(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: Image.asset('assets/image.png', height: 200),
+                    ),
+                    TextFormField(
+                      controller: _emailController,
+                      decoration: InputDecoration(
+                        border: UnderlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(8))),
+                        icon: Icon(Icons.email),
+                        labelText: 'Email',
                       ),
-                      icon: Icon(Icons.email),
-                      labelText: 'Email',
+                      keyboardType: TextInputType.emailAddress,
+                      autovalidate: true,
+                      autocorrect: false,
+                      validator: (_) {
+                        return !state.isEmailValid ? 'Invalid Email' : null;
+                      },
                     ),
-                    keyboardType: TextInputType.emailAddress,
-                    autovalidate: true,
-                    autocorrect: false,
-                    validator: (_) {
-                      return !state.isEmailValid ? 'Invalid Email' : null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(8))
+                    TextFormField(
+                      controller: _passwordController,
+                      decoration: InputDecoration(
+                        border: UnderlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(8))),
+                        icon: Icon(Icons.lock),
+                        labelText: 'Password',
                       ),
-                      icon: Icon(Icons.lock),
-                      labelText: 'Password',
+                      obscureText: true,
+                      autovalidate: true,
+                      autocorrect: false,
+                      validator: (_) {
+                        return !state.isPasswordValid
+                            ? 'Invalid Password'
+                            : null;
+                      },
                     ),
-                    obscureText: true,
-                    autovalidate: true,
-                    autocorrect: false,
-                    validator: (_) {
-                      return !state.isPasswordValid ? 'Invalid Password' : null;
-                    },
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        LoginButton(
-                          onPressed: isLoginButtonEnabled(state)
-                              ? _onFormSubmitted
-                              : null,
-                        ),
-                        GoogleLoginButton(),
-                        CreateAccountButton(userRepository: _userRepository),
-                      ],
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          LoginButton(
+                            onPressed: isLoginButtonEnabled(state)
+                                ? _onFormSubmitted
+                                : null,
+                          ),
+                          GoogleLoginButton(),
+                          CreateAccountButton(userRepository: _userRepository),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );

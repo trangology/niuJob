@@ -1,5 +1,5 @@
 class Strings {
-  static const BASE_URL = "http://8755a8ca.ngrok.io";
+  static const BASE_URL = "http://34.87.151.214:4000";
 
   static String textCreateResumeTitle = "Tạo sơ yếu lý lịch";
   static String textCreateResumeSubtitle =

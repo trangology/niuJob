@@ -7,7 +7,7 @@ import 'package:niu_job/repositories/user_repository.dart';
 import 'package:niu_job/splash/splash_screen.dart';
 
 import 'authentication_bloc/authentication_bloc.dart';
-import 'candicate/create_resume/steps/step_zero.dart';
+import 'home/candicate_or_recruiter.dart';
 import 'home/home.dart';
 import 'login/login_screen.dart';
 
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                         if (state.hasCreatedResume) {
                           return Home(user: stateUser.user);
                         } else {
-                          return StepZero();
+                          return ChooseYourSide();
                         }
                       }
                     },
