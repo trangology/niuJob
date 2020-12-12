@@ -17,6 +17,6 @@ This is an Android application specially designed for supporting tech recruitmen
 - Android developers: [@tsnanh](https://github.com/tsnanh) & [@hnxtay](https://github.com/hnxtay) 
 - Back-end developers: [@nvvinh.ntu](https://github.com/Beli262179) & [@nguyentienhao](https://github.com/nguyentienhao) 
 
-### Deme create resume feature
+### Demo resume builder feature
 
 ![resume_creating](https://github.com/trangology/niuJob/blob/master/images/resume_creating.png?raw=false)
