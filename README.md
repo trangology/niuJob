@@ -5,11 +5,11 @@ This is an Android application specially designed for supporting tech recruitmen
 - Developers can create resume or import existing resume from LinkedIn.
 - Recruiters can post jobs.
 - The server will transfer information from users' and recruiters' inputs to default tags used for the matching system.
-- Based on our smart matching system, candidates and recruiters can find each other easily.
+- Based on our smart matching system, candidates and recruiters can find each other quickly, easily and effectively.
 - Future feature: chat room, video call, screening interviewers by quiz
 
 ### Business model:
-- Partnership: [CodersX](https://coders-x.com/) 
+- Our partner: [CodersX](https://coders-x.com/) 
 
 ### Our team: 
 - Leader & UX/UI designer: [@trangology](https://github.com/trangology)
